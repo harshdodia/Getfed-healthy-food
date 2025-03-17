@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="styles-2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inner">
+          <div class="logo">
+              <a href="#"><img src="img/logo.jpg" class="logo" alt="" /></a>
+            </div>  
+        <div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="Login & Registration Form.html">Login</a></li>
+            <li id="lg-bag">
+              <a href="cart.html"><i class="fa-duotone fa-solid fa-bag-shopping"></i></a>
+            </li>
+            <a href="#" id="close"><i class="fa-duotone fa-solid fa-square-xmark"></i></a>
+          </ul>
+        </div>
+        <div class="mobile">
+          <a href="cart.html"><i class="fa-duotone fa-solid fa-bag-shopping"></i></a>
+          <i id="bar" class="fas fa-outdent menu-toggle"></i>
+        </div>
+    </div>
+      </div>
+    <div class="container">
+        <div class="form-container">
+            <div class="form" id="login-form">
+                <h1 style="color: #fff;">Login</h1>
+                <form>
+                    <label for="login-email" style="color: #fff;">Email:</label>
+                    <input type="email" id="login-email" name="login-email" required>
+
+                    <label for="login-password" style="color: #fff;">Password:</label>
+                    <input type="password" id="login-password" name="login-password" required>
+
+                    <button type="submit" style="color: #fff;">Login</button>
+                    <p style="color: aliceblue;">Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+                </form>
+            </div>
+
+            
+            <div class="form" id="register-form" style="display: none;">
+                <h1 style="color: aliceblue;">Register</h1>
+                <form>
+                    <label for="register-email" style="color: aliceblue;">Email:</label>
+                    <input type="email" id="register-email" name="register-email" required>
+
+                    <label for="register-password" style="color: aliceblue;">Password:</label>
+                    <input type="password" id="register-password" name="register-password" required>
+
+                    <label for="register-confirm-password" style="color: aliceblue;">Confirm Password:</label>
+                    <input type="password" id="register-confirm-password" name="register-confirm-password" required>
+
+                    <button type="submit">Register</button>
+                    <p style="color: aliceblue;">Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        function showLogin() {
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html> 
